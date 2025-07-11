@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Inter', sans-serif; /* フォントをInterに設定 */
+    overflow: hidden; /* スクロールバーが表示されないようにする */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#controlsInfo {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 影を追加 */
+}
+
+#controlsInfo p {
+    margin: 5px 0;
+}
+
+canvas {
+    background: #eee;
+    display: block;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    border-radius: 10px; /* 角を丸くする */
+    display: none; /* 初期状態ではキャンバスを非表示に */
+    max-width: 90vw; /* スマホで画面幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+}
+
+#startButton, #retryButton {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #4CAF50; /* 緑色のボタン */
+    color: white;
+    border: none;
+    border-radius: 8px; /* 角を丸くする */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.1s ease; /* ホバーとクリックのアニメーション */
+}
+
+#startButton:hover, #retryButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* 少し上に移動 */
+}
+
+#startButton:active, #retryButton:active {
+    transform: translateY(0); /* クリック時に元に戻す */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+#gameOverMessage {
+    font-size: 36px;
+    color: #FF0000;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none; /* 初期状態では非表示 */
+    background-color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
